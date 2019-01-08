@@ -17,3 +17,16 @@ it("should multiply one number by itself", () => {
     .toBe(9)
     .toBeA("number");
 });
+
+it("should expect some values", () => {
+  // expect(12).toNotBe(11);
+  // expect({ name: "cody" }).toNotEqual({ name: "Cody" });
+  // expect([2, 3, 4]).toExclude(1);
+  expect({
+    name: "Cody",
+    age: 33,
+    location: "Knoxville"
+  }).toExclude({
+    age: 32
+  });
+});
