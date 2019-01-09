@@ -18,15 +18,29 @@ it("should multiply one number by itself", () => {
     .toBeA("number");
 });
 
-it("should expect some values", () => {
-  // expect(12).toNotBe(11);
-  // expect({ name: "cody" }).toNotEqual({ name: "Cody" });
-  // expect([2, 3, 4]).toExclude(1);
-  expect({
-    name: "Cody",
-    age: 33,
-    location: "Knoxville"
-  }).toExclude({
-    age: 32
+// it("should expect some values", () => {
+//   // expect(12).toNotBe(11);
+//   // expect({ name: "cody" }).toNotEqual({ name: "Cody" });
+//   // expect([2, 3, 4]).toExclude(1);
+//   expect({
+//     name: "Cody",
+//     age: 33,
+//     location: "Knoxville"
+//   }).toExclude({
+//     age: 32
+//   });
+// });
+
+it("should verify first and last names are set", () => {
+  let user = {
+    location: "Knoxville",
+    age: 33
+  };
+
+  utils.setName(user, "Cody Reed");
+
+  expect(user).toInclude({
+    firstName: "Cody",
+    lastName: "Reed"
   });
 });
