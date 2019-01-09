@@ -10,12 +10,30 @@ it("should add two numbers", () => {
     .toBeA("number");
 });
 
+it("should aysnc add two numbers", done => {
+  utils.asyncAdd(3, 4, sum => {
+    expect(sum)
+      .toBe(7)
+      .toBeA("number");
+    done();
+  });
+});
+
 it("should multiply one number by itself", () => {
   let res = utils.square(3);
 
   expect(res)
     .toBe(9)
     .toBeA("number");
+});
+
+it("should aysnc square a number", done => {
+  utils.asyncSquare(3, sum => {
+    expect(sum)
+      .toBe(9)
+      .toBeA("number");
+    done();
+  });
 });
 
 // it("should expect some values", () => {
