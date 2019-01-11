@@ -3,12 +3,14 @@ const expect = require("expect");
 const utils = require("./utils");
 
 describe("Utils", () => {
-  it("should add two numbers", () => {
-    let res = utils.add(33, 11);
+  describe("#add", () => {
+    it("should add two numbers", () => {
+      let res = utils.add(33, 11);
 
-    expect(res)
-      .toBe(44)
-      .toBeA("number");
+      expect(res)
+        .toBe(44)
+        .toBeA("number");
+    });
   });
 
   it("should aysnc add two numbers", done => {
@@ -20,7 +22,7 @@ describe("Utils", () => {
     });
   });
 
-  it("should multiply one number by itself", () => {
+  it("should square a number", () => {
     let res = utils.square(3);
 
     expect(res)
