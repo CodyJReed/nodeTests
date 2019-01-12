@@ -1,3 +1,3 @@
-module.exports.saveUser = users => {
+module.exports.saveUser = user => {
   console.log("Saving user", user);
 };
